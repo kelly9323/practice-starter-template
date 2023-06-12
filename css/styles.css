@@ -2,20 +2,80 @@
  * Базовые стили для всего сайта
  */
 body {
-	position: relative;
-	font-family: 'Noto Sans', sans-serif;
-	font-size: 16px;
-	line-height: 1.4;
-	color: #000;
-	min-width: 320px;
-	overflow-x: hidden;
-	height: auto;
+  position: relative;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #000;
+  min-width: 320px;
+  overflow-x: hidden;
+  height: auto;
 }
-
 
 /**
  * Другие стили
  */
 
+.alladin {
+  position: relative;
+  margin-top: 20px;
+}
+.alladin-img {
+  position: absolute;
+  width: 300px;
+}
+.lamp-img {
+  position: absolute;
+  width: 150px;
+  top: 18px;
+  left: 195px;
+  animation: lampAnim 1.5s ease-in-out infinite alternate;
+}
+.light-img {
+  position: absolute;
+  width: 520px;
+  top: -109px;
+  left: -142px;
+  z-index: -1;
+  animation: lightAnim 4s infinite;
+}
+.zhin {
+  margin-top: 10px;
+  position: relative;
+}
+.zhin-img {
+  width: 300px;
+  position: absolute;
+  animation: zhinAnim 2.5s ease-in-out infinite alternate;
+}
 
-
+@keyframes lampAnim {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+@keyframes lightAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes zhinAnim {
+  0% {
+    transform: rotate(0deg) translateY(-10px);
+  }
+  25% {
+    transform: rotate(10deg) translateY(10px);
+  }
+  50% {
+    transform: rotate(0deg) translateY(-10px);
+  }
+  100% {
+    transform: rotate(-10deg) translateY(10px);
+  }
+}
